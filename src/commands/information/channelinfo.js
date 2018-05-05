@@ -33,7 +33,7 @@ module.exports = class ChannelInfoCommand extends Command {
 
   run (message, args) {
     var channel = args.channel
-    if (channel.type === 'voice') {
+    if (channel.type === 'text') {
       var channelUsers
       if (channel.members.size > 1) {
         channelUsers = oneLineCommaListsAnd`${channel.members.array()}`
